@@ -10,20 +10,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../leviathan/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../leviathan/leviathan/__main__.py">
+        <entry file="file://$PROJECT_DIR$/../leviathan/leviathan/utils/binary_stream.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -45,6 +36,12 @@
       <list>
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/leviathan/__main__.py" />
+        <option value="$PROJECT_DIR$/../leviathan/leviathan/network/protocol/protocol_info.py" />
+        <option value="$PROJECT_DIR$/../leviathan/leviathan/network/network.py" />
+        <option value="$PROJECT_DIR$/../leviathan/leviathan/network/protocol/packet_pool.py" />
+        <option value="$PROJECT_DIR$/../leviathan/leviathan/network/protocol/login_packet.py" />
+        <option value="$PROJECT_DIR$/../leviathan/leviathan/network/protocol/data_packet.py" />
+        <option value="$PROJECT_DIR$/../leviathan/leviathan/utils/binary_stream.py" />
       </list>
     </option>
   </component>
@@ -67,6 +64,17 @@
             <path>
               <item name="leviathan" type="b2602c69:ProjectViewProjectNode" />
               <item name="leviathan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leviathan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leviathan" type="462c0819:PsiDirectoryNode" />
+              <item name="leviathan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leviathan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leviathan" type="462c0819:PsiDirectoryNode" />
+              <item name="leviathan" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -278,7 +286,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564402916933</updated>
-      <workItem from="1564402918519" duration="536000" />
+      <workItem from="1564402918519" duration="5340000" />
     </task>
     <task id="LOCAL-00001" summary="[1.init]">
       <created>1564403169909</created>
@@ -291,19 +299,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="536000" />
+    <option name="totallyTimeSpent" value="5340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="25" width="1311" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26086956" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26086956" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.37947884" />
       <window_info anchor="bottom" id="Python Console" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -329,10 +338,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="[1.init]" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../leviathan/setup.py">
+    <entry file="file://$PROJECT_DIR$/../leviathan/leviathan/network/protocol/protocol_info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -340,6 +349,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../leviathan/leviathan/network/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../leviathan/leviathan/network/protocol/packet_pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../leviathan/leviathan/network/protocol/login_packet.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../leviathan/leviathan/network/protocol/data_packet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../leviathan/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../leviathan/leviathan/utils/binary_stream.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
