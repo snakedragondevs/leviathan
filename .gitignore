@@ -102,3 +102,29 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Intellij Platforms
+*.iml
+.idea
+.idea/*
+
+# Generated files
+banned-ips.json
+banned-players.json
+nukkit.yml
+ops.txt
+server.log
+server.properties
+white-list.txt
+worlds
+worlds/*
+plugins
+plugins/*
+players
+players/*
+logs
+logs/*
+resource_packs
+resource_packs/*
+creativeitems.json
+recipes.json
