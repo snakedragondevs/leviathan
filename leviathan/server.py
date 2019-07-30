@@ -27,9 +27,12 @@ class Server:
         self.tick_processor()
 
     def tick_processor(self):
-        self.tick()
+        # todo server tick processor
+        while self.is_running:
+            self.tick()
         pass
 
     def tick(self):
+        # todo server per tick
         self.__network.process_interface()
         pass
