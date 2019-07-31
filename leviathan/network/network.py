@@ -1,4 +1,4 @@
-from leviathan.network.protocol.protocol_info import ProtocolInfo
+from leviathan.network.minecraft.protocol.protocol_info import ProtocolInfo
 
 
 class Network:
