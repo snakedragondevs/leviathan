@@ -1,18 +1,17 @@
-import base64
-import datetime
-import os
 import threading
-import time
-from pathlib import Path
 
+from twisted.internet.protocol import DatagramProtocol
+from twisted.internet import reactor
 from logzero import logger
 
 from leviathan.network import Network
-from leviathan.utils.config import Config
 
 
-def TimestampMillisec64():
-    return int((datetime.datetime.utcnow() - datetime.datetime(1970, 1, 1)).total_seconds() * 1000)
+class Echo(DatagramProtocol):
+
+    def datagramReceived(self, datagram, address):
+        print("received %r from %s" % (datagram, address))
+        self.transport.write('reply example'.encode(), address)
 
 
 class Server:
@@ -22,8 +21,6 @@ class Server:
         self.current_thread = threading.currentThread()
 
         self.__network = Network(self)
-
-        # self.__network.register_interface(LeviathanInterface(self))
 
         self.start()
 

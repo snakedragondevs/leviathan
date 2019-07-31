@@ -1,5 +1,5 @@
 from leviathan.network.protocol.data_packet import DataPacket
-from leviathan.network.protocol.protocol_info import ProtocolInfo
+from leviathan.network.protocol.protocol_info_pmmp import ProtocolInfo
 
 
 class LoginPacket(DataPacket):
