@@ -13,3 +13,8 @@ class LeviathanCore:
 
         # instantiate network
         self.__network = Network(self)
+
+        # todo main thread loop
+
+    def loop(self):
+        pass

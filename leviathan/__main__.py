@@ -7,6 +7,7 @@ from logzero import logger
 DATA_PATH = os.getcwd() + "/"
 PLUGIN_PATH = DATA_PATH + "plugins"
 
+
 def main(args=None):
     try:
         LeviathanCore(DATA_PATH, PLUGIN_PATH)

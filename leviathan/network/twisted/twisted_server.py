@@ -53,7 +53,7 @@ class HeartbeatReceiver(DatagramProtocol):
 class TwistedServer:
 
     def __init__(self):
-        heart_beat_sender_obj = HeartbeatSender("sender", "0.0.0.0", 19136)
+        # heart_beat_sender_obj = HeartbeatSender("sender", "0.0.0.0", 19136)
         reactor.listenMulticast(19136, HeartbeatReceiver(), listenMultiple=True)
         # reactor.listenMulticast(19136, heart_beat_sender_obj, listenMultiple=True)
         reactor.run()
