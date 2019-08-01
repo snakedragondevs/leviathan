@@ -1,7 +1,7 @@
 from logzero import logger
 
-from leviathan.level.level import Level
-from leviathan.math.vector3 import Vector3
+from leviathan.api.level.level import Level
+from leviathan.api.math.vector3 import Vector3
 
 
 class Position(Vector3):
