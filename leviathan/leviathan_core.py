@@ -5,7 +5,7 @@ from logzero import logger
 from leviathan.network import Network
 
 
-class Server:
+class LeviathanCore:
 
     def __init__(self, data_path, plugin_path):
         self.is_running = True
