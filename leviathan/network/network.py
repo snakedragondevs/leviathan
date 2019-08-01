@@ -1,4 +1,5 @@
 from leviathan.network.minecraft.protocol.protocol_info import ProtocolInfo
+from leviathan.network.twisted.twisted_server import TwistedServer
 
 
 class Network:
@@ -13,6 +14,9 @@ class Network:
         self.register_packets()
         self.server = server
 
+        # todo make it work
+        self.twisted_server = TwistedServer()
+
     # def process_interface(self):
     #     interface: SourceInterface
     #     for interface in self.interfaces:
@@ -25,7 +29,7 @@ class Network:
         self.interfaces.add(interface)
 
     def register_packet(self, packet_id, packet_class):
-        self.packet_pool[packet_id & 0xff] = packet_class
+        self.packet_pool[packet_id] = packet_class
 
     def register_packets(self):
         self.register_packet(ProtocolInfo.ADD_ENTITY_PACKET, 'ADD_ENTITY_PACKET')

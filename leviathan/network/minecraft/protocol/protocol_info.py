@@ -3,6 +3,11 @@ import abc
 
 class ProtocolInfo(metaclass=abc.ABCMeta):
 
+    CURRENT_PROTOCOL = "361"
+    MINECRAFT_VERSION = "v1.12.0"
+    MINECRAFT_VERSION_NETWORK = "1.12.0"
+
+
     LOGIN_PACKET = 0x01
     PLAY_STATUS_PACKET = 0x02
     SERVER_TO_CLIENT_HANDSHAKE_PACKET = 0x03
