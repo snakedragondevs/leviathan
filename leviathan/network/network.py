@@ -1,5 +1,5 @@
 from leviathan.network.minecraft.protocol.protocol_info import ProtocolInfo
-from leviathan.network.twisted.twisted_server import TwistedServer
+from leviathan.network.server import Server
 
 
 class Network:
@@ -15,7 +15,8 @@ class Network:
         self.server = server
 
         # todo make it work
-        self.twisted_server = TwistedServer()
+        self.leviathan_server = Server()
+        # self.twisted_server = TwistedServer()
 
     # def process_interface(self):
     #     interface: SourceInterface
