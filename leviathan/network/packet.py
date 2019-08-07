@@ -1,16 +1,22 @@
-from abc import ABC, abstractmethod
-
-
-class Packet(ABC):
-
-    @abstractmethod
-    def encode(self):
-        pass
-
-    @abstractmethod
-    def decode(self):
-        pass
-
-
-def packet_registry():
+class ValidationError(Exception):
     pass
+
+
+class Packet(object):
+
+    def __init__(self):
+        self._packet = b''
+
+    @classmethod
+    def from_data(
+            cls,
+            sequence_number,
+            dest_addr,
+            source_addr,
+            payload='',
+            more_fragments=0,
+            ack=0,
+            fin=False,
+            syn=False,
+    ):
+        pass
