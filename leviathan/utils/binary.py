@@ -189,6 +189,21 @@ class Binary:
         return pack('>l', l)
 
     @staticmethod
+    def read_l_long(l: bytes) -> int:
+        return unpack('<l', l)[0]
+
+    @staticmethod
+    def write_l_long(l: int) -> bytes:
+        return pack('<l', l)
+
+    """
+    LONG LONG
+    - read_long_long
+    - write_long_long
+    - read_l_long_long
+    - write_l_long_long
+    """
+    @staticmethod
     def read_long_long(l: bytes) -> int:
         return unpack('>q', l)[0]
 
@@ -197,9 +212,9 @@ class Binary:
         return pack('>q', l)
 
     @staticmethod
-    def read_l_long(l: bytes) -> int:
-        return unpack('<l', l)[0]
+    def read_l_long_long(l: bytes) -> int:
+        return unpack('<q', l)[0]
 
     @staticmethod
-    def write_l_long(l: int) -> bytes:
-        return pack('>l', l)
+    def write_l_long_long(l: int) -> bytes:
+        return pack('<q', l)
