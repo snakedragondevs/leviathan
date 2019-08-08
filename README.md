@@ -1,4 +1,5 @@
 # Leviathan
+[![Build Status](https://travis-ci.com/snakedragondevs/leviathan.svg?branch=master)](https://travis-ci.com/snakedragondevs/leviathan)
 
 A Minecraft: Bedrock Edition server software written in Python
 
