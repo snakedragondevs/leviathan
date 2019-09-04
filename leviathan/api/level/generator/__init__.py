@@ -21,9 +21,9 @@ class Generator(ABC):
     @staticmethod
     def add_generator(cls, name, typ):
         name = str(name).lower()
-        if cls is not None and not Generator.name_list.__contains__(name):
+        if cls is not None and name not in Generator.name_list:
             Generator.name_list[name] = cls
-            if not Generator.type_list.__contains__(typ):
+            if typ not in Generator.type_list:
                 Generator.type_list[typ] = cls
             return True
         return False
