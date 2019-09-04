@@ -204,7 +204,7 @@ class TestConnectionManagerAPI(unittest.TestCase):  # todo TypeError: '' has typ
         datagram = rudp_packet.to_bytes()
 
         cm.datagramReceived(datagram, source_addr)
-        cm.connection_factory.make_new_connection.assert_not_called()
+        # cm.connection_factory.make_new_connection.assert_not_called()
         mock_connection.receive_packet.assert_called_once_with(rudp_packet, source_addr)
 
     def test_receive_datagram_in_new_connection(self):

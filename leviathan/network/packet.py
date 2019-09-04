@@ -45,7 +45,7 @@ class Packet(object):
         sequence_number,
         dest_addr,
         source_addr,
-        payload='',
+        payload=b'',
         more_fragments=0,
         ack=0,
         fin=False,
