@@ -13,15 +13,30 @@ class LeviathanCore:
     MINECRAFT_VERSION = "1.12.0"
 
     def __init__(self, data_path, plugin_path):
-        self.is_running = True
-        self.current_thread = threading.currentThread()
 
-        # instantiate network
-        self.__network = Network(self)
+        # TODO Console
 
-        # todo main thread loop
+        # TODO Configurations
+
+        # TODO File Loaders (banlist, operators, whitelists)
+
+        # TODO Language/Locale (Low Priority) default=eng
+
+        # TODO Plugin Loaders
+
+        # TODO levels and players directories
+
+        # TODO load default level
+
+        # TODO other levels
+
+        # TODO Networks and Server Core
+        self.leviathan_server = None
+
+        # TODO autosaving
+
+        # TODO loop
         asyncio.run(self.loop())
-
 
     async def loop(self):
         print('Hello ...')
