@@ -1,5 +1,6 @@
 import collections
 import logging
+import sys
 import unittest
 
 import mock
@@ -8,12 +9,12 @@ from twisted.internet import address, protocol, udp
 from leviathan.network import connection, packet, rudp
 
 
-class TestConnectionManagerAPI(unittest.TestCase):  # todo TypeError: '' has type str, but expected one of: bytes
+class TestConnectionManagerAPI(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
         cls.public_ip = '123.45.67.89'
-        cls.port = 12345
+        cls.port = 19132
         cls.addr1 = (cls.public_ip, cls.port)
         cls.addr2 = ('132.54.76.98', 54321)
         cls.addr3 = ('231.76.45.89', 15243)

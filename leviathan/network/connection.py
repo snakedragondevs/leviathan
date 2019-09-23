@@ -491,7 +491,7 @@ class Connection(object):
         """
         if not self._sending_window:
             return
-        lowest_seqnum = iter(self._sending_window).next()
+        lowest_seqnum = iter(self._sending_window).__next__()
         if acknum >= lowest_seqnum:
             for seqnum in range(lowest_seqnum, acknum):
                 self._retire_scheduled_packet_with_seqnum(seqnum)
@@ -532,7 +532,7 @@ class Connection(object):
             last_seqnum = fragments[-1].sequence_number
             self._update_next_expected_seqnum(last_seqnum)
             self._update_next_delivered_seqnum(last_seqnum)
-            payload = ''.join(f.payload for f in fragments)
+            payload = b''.join(f.payload for f in fragments)
             self.handler.receive_message(payload)
 
             if self._next_delivered_seqnum not in self._receive_heap:
