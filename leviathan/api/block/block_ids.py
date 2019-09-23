@@ -1,6 +1,6 @@
 from abc import ABCMeta
 
-class BlockIds:
+class BlockIds():
     __metaclass__ = ABCMeta
 
     AIR = 0
