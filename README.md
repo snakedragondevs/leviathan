@@ -3,9 +3,17 @@
 
 A Minecraft: Bedrock Edition server software written in Python
 
-This software is currently on heavy development and most of fundamentals for a server is still being develop, unlike most of other server using the same protocol than usual this server has the benefit of that structure while making it more efficient.
+This software is currently under heavy development and most of fundamentals for a server is still being develop.
 
-we aims to provide high performance minecraft bedrock server and more responsive gameplay to players while for developers and plugin makers will have less trouble in making there own custom plugin by having straightforward API
+**Leviathan** aims to provide a scalable Minecraft bedrock server that utilize your server capacity efficiently, and also of course to make a server with more features as possible.
+
+## Development
+
+Currently I'm on the middle of designing a good network interface that is easy to use and understand, credits to NukkitX rewrite for this kind of design idea. you might ask why? well because unlike java we wan't to extend it's performance to it's highest as possible (I hope), and also I don't know how Java works, so I can't compare the difference.
+
+## Setup
+
+Setup is not yet user friendly, you need at least basic knowledge on how this works
 
 ## Contributing
 
