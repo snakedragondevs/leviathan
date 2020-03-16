@@ -1,4 +1,3 @@
-import threading
 import asyncio
 
 from logzero import logger
@@ -6,40 +5,57 @@ from logzero import logger
 # from leviathan.network import Network
 
 
-class LeviathanCore:
+class Core:
 
-    NAME = "Leviathan"
-    API_VERSION = "0.1.0"
-    MINECRAFT_VERSION = "1.12.0"
+    # is_running = True
+    # has_stopped = False
 
     def __init__(self, data_path, plugin_path):
+        # some initialize at instance level
 
-        # TODO Console
+        # setup defaults
+
+        # registries
+
+        # initialize server console
+        # initialize console thread
+        pass
+
+    def run(self):
+        # TODO directories
+        # worlds/ players/
+
+        # (console thread).start
 
         # TODO Configurations
+        # if not leviathan.yml, write new including language selection
+        # and setup default properties and more default network configurations
 
-        # TODO File Loaders (banlist, operators, whitelists)
+        # TODO metadata
 
-        # TODO Language/Locale (Low Priority) default=eng
-
-        # TODO Plugin Loaders
-
-        # TODO levels and players directories
-
-        # TODO load default level
-
-        # TODO other levels
-
-        # TODO Networks and Server Core
-        self.leviathan_server = None
+        # TODO more configs (ops.txt, white-list.txt, banned-players.json, banned-ips.json)
 
         # TODO autosaving
 
-        # TODO game loop
-        self.start()
+        # TODO initialize console commands
 
-    def start(self):
+        # TODO managers
+
+        # TODO packs
+
+        # TODO registries
+        # block, item, entity, etc
+
+        # TODO Levels
+
+        # TODO network instance, and engine interface
+
+        # TODO game loop
+        self.start_server()
+
+    def start_server(self):
         loop = asyncio.get_event_loop()
+        self.tick_counter = 0
         try:
             # worker
             asyncio.ensure_future(self.tick_processor())
@@ -50,7 +66,10 @@ class LeviathanCore:
             loop.close()
 
     async def tick_processor(self):
-        while True:
-            logger.debug('ticking')
+        while True:  # while server is running
+            self.tick()
+            logger.debug('ticking {}'.format(self.tick_counter))
             await asyncio.sleep(1)
-            logger.debug('finished')
+
+    def tick(self):
+        self.tick_counter += 1

@@ -1,22 +1,22 @@
-syntax = "proto2";
+syntax = "proto3";
 
 package leviathan;
 
 option optimize_for = LITE_RUNTIME;
 
 message Packet {
-    optional bool syn = 1;
-    optional bool fin = 2;
+    bool syn = 1;
+    bool fin = 2;
 
-    optional uint64 sequence_number = 3;
-    optional uint64 more_fragments = 4;
-    optional uint64 ack = 5;
+    uint64 sequence_number = 3;
+    uint64 more_fragments = 4;
+    uint64 ack = 5;
 
-    optional bytes payload = 6;
+    bytes payload = 6;
 
-    required string dest_ip = 7;
-    required uint32 dest_port = 8;
+    string dest_ip = 7;
+    uint32 dest_port = 8;
 
-    required string source_ip = 9;
-    required uint32 source_port = 10;
+    string source_ip = 9;
+    uint32 source_port = 10;
 }
