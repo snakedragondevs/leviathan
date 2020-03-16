@@ -36,19 +36,21 @@ class LeviathanCore:
         # TODO autosaving
 
         # TODO game loop
-        asyncio.run(self.loop())
+        self.start()
 
-    async def loop(self):
-        tick_counter = 0
-        while 1:
-            try:
-                # tick
-                self.tick()
-                tick_counter += 1
-                logger.debug('tick {}'.format(tick_counter))
-                await asyncio.sleep(1)
-            except RuntimeError:
-                logger.error('exception')
+    def start(self):
+        loop = asyncio.get_event_loop()
+        try:
+            # worker
+            asyncio.ensure_future(self.tick_processor())
+            loop.run_forever()
+        except KeyboardInterrupt:
+            pass
+        finally:
+            loop.close()
 
-    def tick(self):
-        logger.debug('ticking')
+    async def tick_processor(self):
+        while True:
+            logger.debug('ticking')
+            await asyncio.sleep(1)
+            logger.debug('finished')
