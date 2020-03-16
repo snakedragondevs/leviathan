@@ -6,7 +6,7 @@ import unittest
 import mock
 from twisted.internet import address, protocol, udp
 
-from leviathan.network import connection, packet, rudp
+from leviathan.network.engine import connection, packet, rudp
 
 
 class TestConnectionManagerAPI(unittest.TestCase):

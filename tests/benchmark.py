@@ -4,7 +4,7 @@ import collections
 import random
 import time
 
-from leviathan.network import rudp, constants, connection
+from leviathan.network.engine import rudp, constants, connection
 
 
 class StubHandler(connection.Handler):

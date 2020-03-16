@@ -5,7 +5,7 @@ import collections
 from google.protobuf import message
 from twisted.internet import protocol
 
-from leviathan.network import packet
+from leviathan.network.engine import packet
 
 
 class ConnectionMultiplexer(
@@ -143,7 +143,7 @@ class ConnectionMultiplexer(
                 )
         else:
             if (addr[0] in self._banned_ips or
-               rudp_packet.source_addr[0] in self._banned_ips):
+                    rudp_packet.source_addr[0] in self._banned_ips):
                 return
             if rudp_packet.dest_addr[0] != self.public_ip:
                 if self.relaying:

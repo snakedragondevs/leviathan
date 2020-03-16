@@ -2,7 +2,7 @@ import mock
 from twisted.internet import reactor, task
 from twisted.trial import unittest
 
-from leviathan.network import connection, constants, packet, rudp
+from leviathan.network.engine import connection, constants, packet, rudp
 
 
 class TestScheduledPacketAPI(unittest.TestCase):

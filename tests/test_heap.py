@@ -1,6 +1,6 @@
 import unittest
 
-from leviathan.network import heap, packet
+from leviathan.network.engine import heap, packet
 
 
 class TestHeapAPI(unittest.TestCase):

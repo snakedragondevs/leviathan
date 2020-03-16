@@ -3,7 +3,7 @@ import asyncio
 
 from logzero import logger
 
-from leviathan.network import Network
+# from leviathan.network import Network
 
 
 class LeviathanCore:
@@ -35,10 +35,20 @@ class LeviathanCore:
 
         # TODO autosaving
 
-        # TODO loop
+        # TODO game loop
         asyncio.run(self.loop())
 
     async def loop(self):
-        print('Hello ...')
-        await asyncio.sleep(1)
-        print('... World!')
+        tick_counter = 0
+        while 1:
+            try:
+                # tick
+                self.tick()
+                tick_counter += 1
+                logger.debug('tick {}'.format(tick_counter))
+                await asyncio.sleep(1)
+            except RuntimeError:
+                logger.error('exception')
+
+    def tick(self):
+        logger.debug('ticking')

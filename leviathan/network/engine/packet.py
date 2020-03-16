@@ -8,7 +8,7 @@ Classes:
 import functools
 import re
 
-from leviathan.network import packet_pb2
+from leviathan.network.engine import packet_pb2
 
 # IP validation regexes from the Regular Expressions Cookbook.
 # For now, only standard (non-compressed) IPv6 addresses are

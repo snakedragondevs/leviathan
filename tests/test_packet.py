@@ -2,7 +2,7 @@ import unittest
 
 import six
 
-from leviathan.network import packet
+from leviathan.network.engine import packet
 
 
 class TestPacketAPI(unittest.TestCase):

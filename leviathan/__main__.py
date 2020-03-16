@@ -1,7 +1,7 @@
 import os
 from logzero import logger
 
-from leviathan.leviathan_core import LeviathanCore
+from leviathan.core import LeviathanCore
 
 DATA_PATH = os.getcwd() + "/"
 PLUGIN_PATH = DATA_PATH + "plugins"

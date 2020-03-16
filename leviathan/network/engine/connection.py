@@ -12,7 +12,7 @@ import random
 
 from twisted.internet import reactor, task
 
-from leviathan.network import constants, heap, packet
+from leviathan.network.engine import constants, heap, packet
 
 
 REACTOR = reactor

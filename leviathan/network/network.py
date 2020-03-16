@@ -1,5 +1,5 @@
-from leviathan.network.minecraft_protocol.protocol_info import ProtocolInfo
-from leviathan.network.leviathan_server import LeviathanServer
+from leviathan.network.protocol import ProtocolInfo
+# from leviathan.network.leviathan_server import LeviathanServer
 
 
 class Network:
@@ -15,7 +15,7 @@ class Network:
         self.server = server
 
         # todo make it work
-        self.leviathan_server = Server()
+        # self.leviathan_server = Server()
         # self.twisted_server = TwistedServer()
 
     # def process_interface(self):
@@ -111,10 +111,12 @@ class Network:
         self.register_packet(ProtocolInfo.UPDATE_BLOCK_PACKET, 'UPDATE_BLOCK_PACKET')
         self.register_packet(ProtocolInfo.UPDATE_TRADE_PACKET, 'UPDATE_TRADE_PACKET')
         self.register_packet(ProtocolInfo.MOVE_ENTITY_DELTA_PACKET, 'MOVE_ENTITY_DELTA_PACKET')
-        self.register_packet(ProtocolInfo.SET_LOCAL_PLAYER_AS_INITIALIZED_PACKET, 'SET_LOCAL_PLAYER_AS_INITIALIZED_PACKET')
+        self.register_packet(ProtocolInfo.SET_LOCAL_PLAYER_AS_INITIALIZED_PACKET,
+                             'SET_LOCAL_PLAYER_AS_INITIALIZED_PACKET')
         self.register_packet(ProtocolInfo.NETWORK_STACK_LATENCY_PACKET, 'NETWORK_STACK_LATENCY_PACKET')
         self.register_packet(ProtocolInfo.UPDATE_SOFT_ENUM_PACKET, 'UPDATE_SOFT_ENUM_PACKET')
-        self.register_packet(ProtocolInfo.NETWORK_CHUNK_PUBLISHER_UPDATE_PACKET, 'NETWORK_CHUNK_PUBLISHER_UPDATE_PACKET')
+        self.register_packet(ProtocolInfo.NETWORK_CHUNK_PUBLISHER_UPDATE_PACKET,
+                             'NETWORK_CHUNK_PUBLISHER_UPDATE_PACKET')
         self.register_packet(ProtocolInfo.AVAILABLE_ENTITY_IDENTIFIERS_PACKET, 'AVAILABLE_ENTITY_IDENTIFIERS_PACKET')
         self.register_packet(ProtocolInfo.LEVEL_SOUND_EVENT_PACKET_V2, 'LEVEL_SOUND_EVENT_PACKET_V2')
         self.register_packet(ProtocolInfo.SCRIPT_CUSTOM_EVENT_PACKET, 'SCRIPT_CUSTOM_EVENT_PACKET')
@@ -127,4 +129,3 @@ class Network:
         self.register_packet(ProtocolInfo.CLIENT_CACHE_STATUS_PACKET, 'CLIENT_CACHE_STATUS_PACKET')
         self.register_packet(ProtocolInfo.MAP_CREATE_LOCKED_COPY_PACKET, 'MAP_CREATE_LOCKED_COPY_PACKET')
         self.register_packet(ProtocolInfo.ON_SCREEN_TEXTURE_ANIMATION_PACKET, 'ON_SCREEN_TEXTURE_ANIMATION_PACKET')
-
