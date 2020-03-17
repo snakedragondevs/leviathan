@@ -4,6 +4,7 @@ import time
 
 from logzero import logger
 
+
 class Config:
     DETECT = -1
     PROPERTIES = 0
@@ -39,7 +40,7 @@ class Config:
         "enum": ENUM,
     }
 
-    def __init__(self, file: str, __type: int=DETECT, default=None):
+    def __init__(self, file: str, __type: int = DETECT, default=None):
         self.load(file, __type, default)
 
     def reload(self):
@@ -79,7 +80,7 @@ class Config:
                 self.config = None  # TODO:
             elif self.__type is self.YAML:
                 content = self.fix_yaml_indexes(content)
-                self.config = None #  TODO:
+                self.config = None  # TODO:
             elif self.__type is self.SERIALIZED:
                 self.config = None  # TODO:
             elif self.__type is self.ENUM:

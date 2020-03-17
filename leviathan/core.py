@@ -2,7 +2,8 @@ import asyncio
 
 from logzero import logger
 
-# from leviathan.network import Network
+from leviathan.network import Network
+from leviathan.network.network_interface import NetworkInterface
 
 
 class Core:
@@ -49,6 +50,8 @@ class Core:
         # TODO Levels
 
         # TODO network instance, and engine interface
+        self.network = Network()
+        self.network.register_interface(NetworkInterface())
 
         # TODO game loop
         self.start_server()
@@ -73,3 +76,5 @@ class Core:
 
     def tick(self):
         self.tick_counter += 1
+
+        self.network.process_interfaces()

@@ -43,7 +43,7 @@ class ConnectionMultiplexer(
         super(ConnectionMultiplexer, self).__init__()
         self.connection_factory = connection_factory
         self.public_ip = public_ip
-        self.port = None
+        self.port = 19132
         self.relaying = relaying
         self._active_connections = {}
         self._banned_ips = set()
